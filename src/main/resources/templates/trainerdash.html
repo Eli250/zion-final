@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>Trainer Dashboard</title>
+    <link rel="stylesheet" th:href="@{/Css/trainerdash.css}" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a th:href="@{/trainer}">Register</a></li>
+        <li><a href="#">Find Trainers</a></li>
+        <li><a th:href="@{/trainerdash}">Trainer Dashboard</a></li>
+        <li><a  th:href="@{/login}" class="login-button">Login</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="client-list">
+        <h2>Client List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Fitness Goal</th>
+              <th>Current Weight</th>
+              <th>Target Weight</th>
+              <th>Workouts This Week</th>
+              <th>Goal Workouts Per Week</th>
+              <th>General Progress</th>
+              <th>Add Progress</th>
+              <th>Update Progress</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Client 1</td>
+              <td>client1@email.com</td>
+              <td>Lose weight</td>
+              <td>150 lbs</td>
+              <td>130 lbs</td>
+              <td>3</td>
+              <td>5</td>
+              <td>Good progress, keep it up!</td>
+              <td><button>Add Progress</button></td>
+              <td><button>Update Progress</button></td>
+            </tr>
+            <tr>
+              <td>Client 2</td>
+              <td>client2@email.com</td>
+              <td>Build muscle</td>
+              <td>170 lbs</td>
+              <td>180 lbs</td>
+              <td>4</td>
+              <td>4</td>
+              <td>Progress is slow, need to increase workouts.</td>
+              <td><button>Add Progress</button></td>
+              <td><button>Update Progress</button></td>
+            </tr>
+            <!-- More rows for additional clients can be added here -->
+          </tbody>
+        </table>
+      </section>
+
+      <section class="client-form">
+        <h2>Client Information</h2>
+        <form method="POST"  th:action="@{/saveClient}" th:object="${trainerInfo}">
+          <label for="client_name">Name:</label>
+          <input type="text" name="client_name" id="client_name">
+          <br>
+          <label for="client_email">Email:</label>
+          <input type="email" name="client_email" id="client_email" th:field="*{email}">
+          <br>
+          <label for="fitness_goal">Fitness Goal:</label>
+          <select name="fitness_goal" id="fitness_goal">
+            <option value="lose_weight">Lose Weight</option>
+            <option value="build_muscle">Build Muscle</option>
+            <option value="maintain_weight">Maintain Weight</option>
+          </select>
+          <br>
+          <label for="current_weight">Current Weight:</label>
+          <input type="text" name="current_weight" id="current_weight" value="150 lbs" th:field="*{currentWeight}">
+          <br>
+
+          <label for="current_weight">Height:</label>
+          <input type="text" name="height" id="height" value="1.60 m" th:field="*{height}">
+          <br>
+
+
+          <label for="target_weight">Target Weight:</label>
+          <input type="text" name="target_weight" id="target_weight" value="130 lbs" th:field="*{targetWeight}">
+          <br>
+          <label for="workouts_this_week">Workouts This Week:</label>
+          <input type="number" name="workouts_this_week" id="workouts_this_week" value="3">
+          <br>
+          <label for="goal_workouts_per_week">Goal Workouts Per Week:</label>
+          <input type="number" name="goal_workouts_per_week" id="goal_workouts_per_week" value="5" th:field="*{targetGoal}">
+          <br>
+          <label for="general_progress">General Progress:</label>
+          <textarea name="general_progress" id="general_progress" th:field="*{generalProgress}">Good progress, keep it up!</textarea>
+          <br>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" th:field="*{comment}"></textarea>
+          <br>
+          <input type="submit" name="add_progress" value="Submit">
+        </form>
+      </section>
+      
+    </main>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Eat Better</title>
+  <link rel="stylesheet" type="text/css"  th:href="@{/Css/diet.css}">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="menu">
+      <li><a th:href="@{/landing}">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Register</a></li>
+      <li><a href="#">Find Trainers</a></li>
+      <li><a th:href="@{/trainer}" >Trainer Dashboard</a></li>
+      <li><a  th:href="@{/login}" class="login-button">Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="text-container">
+      <h1 class="header-title">I Want to Eat Better</h1>
+      <p>Ready to take charge of your diet? These nutrition-focused guides, tips, and recipes will set you up for success.</p>
+    </div>
+    <div class="image-container"></div>
+  </div>
+  <div class="topics">
+    <h2>Health and Wellness</h2>
+    <div class="topic-row">
+      <div class="topic-item">
+        <img src="/static/images/High%20Tea.jpeg" alt="Less Sugar Consumption ">
+        <h3>keep Sugar Under Control</h3>
+        <p>Avoid excessive sugar intake with these helpful tips and strategies:
+          Avoid sugary beverages like soda and fruit juices,
+          Limit consumption of processed and packaged foods.
+        </p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/Top%20foods%20for%20muscle%20gain%20and%20fat%20loss.jpeg" alt="Topic 2">
+        <h3>Muscle Gain & Fat Loss</h3>
+       <p>Achieve your fitness goals with effective nutrition 
+          strategies for muscle gain and fat loss.</p>
+        </p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/Build muscles fast with these products.png" alt="Topic 3">
+        <h3>Muscle building</h3>
+        <p>Discover refreshing and nutritious options for fresh drinks
+           and juices to support your health and well-being.</p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/Exactly What To Eat To Cut Your Alzheimer's Risk In Half.jpeg" alt="Topic 4">
+        <h3>Meals plan</h3>
+        <p>Create a personalized meals plan to meet your dietary needs 
+           and goals, with balanced and nutritious recipes.</p>
+      </div>
+    </div>
+    <div class="topic-row">
+      <div class="topic-item">
+        <img src="/static/images/High Protein Meal Plan.png" alt="Topic 5">
+        <h3>Protein Tips</h3>
+        <p>Protein is a macronutrient, which means it’s one of the three main
+           nutrients your body needs to function properly. You get protein from
+            meats, dairy products,and legumes such as beans and lentils.</p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/Fruit Salad with Honey Lime Dressing.jpeg" alt="Topic 6">
+        <h3>Fresh fruits</h3>
+        <p>A bowl of summer fruits drizzled with a sweet and tangy honey lime dressing.
+           Refreshing, delicious and full of great fruity flavors! An easy side for any 
+           meals,potlucks and parties.</p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/How To Make A Smoothie Diet + Simple Healthy Smoothie Recipes_.jpeg" alt="Topic 6">
+        <h3>Smoothie Diet</h3>
+        <p>Discover refreshing and nutritious options for fresh 
+          drinks and juices to support your health and well-being.</p>
+      </div>
+      <div class="topic-item">
+        <img src="/static/images/Muscle building shopping list.jpeg" alt="Topic 6">
+        <h3>Meals plan</h3>
+        <p>Create a personalized meals plan to meet your dietary needs and goals,
+           with balanced and nutritious recipes that are tailored to your preferences 
+           and lifestyle.</p>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+<footer class="footer">
+  <div class="about-us">
+    <h3>About Us</h3>
+    <div class="vertical-line"></div>
+    <div class="about-us-text">
+      <p class="about-us-text">Welcome to our Fitness App! We are dedicated to helping you achieve your health and fitness goals.
+         Our app provides personalized workout plans, nutrition guidance, and tracking tools to support your fitness journey. 
+         Whether you're a beginner or an experienced fitness enthusiast, our app has something for everyone. Join us today and unlock a world of fitness possibilities!.</p>
+    </div>
+  </div>
+  <div class="additional-content">
+    <h3>Additional Content</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+       Sed aliquet nulla eget feugiat fermentum.</p>
+  </div>
+</footer>
+</body>
+</html>

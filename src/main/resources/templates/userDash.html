@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" th:href="@{/Css/userDash.css}" />
+  </head>
+  <body>
+    <header>
+      <h1>User Dashboard</h1>
+      <nav>
+        <ul>
+          <li><a th:href="@{/userDash}">Home</a></li>
+          <li><a href="#">My Profile</a></li>
+          <li><a href="#">My Workouts</a></li>
+          <li><a href="#">My Progress</a></li>
+          <li><a th:href="@{/diet}">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="welcome-message">
+        <h2>Welcome back, [Username]!</h2>
+        <p>Here's an overview of your progress and recent activity.</p>
+      </section>
+
+      <section class="progress-summary">
+        <h2>Progress Summary</h2>
+        <div class="summary-card">
+          <h3>Weight</h3>
+          <p>Current Weight: [Weight]</p>
+          <p>Goal Weight: [Goal Weight]</p>
+          <p>Change Since Last Week: [Weight Change]</p>
+        </div>
+        <div class="summary-card">
+          <h3>Body Fat Percentage</h3>
+          <p>Current Body Fat Percentage: [Body Fat Percentage]</p>
+          <p>Goal Body Fat Percentage: [Goal Body Fat Percentage]</p>
+          <p>Change Since Last Week: [Body Fat Percentage Change]</p>
+        </div>
+        <div class="summary-card">
+          <h3>Workouts</h3>
+          <p>Workouts Completed This Week: [Workouts Completed]</p>
+          <p>Goal Workouts Per Week: [Goal Workouts Per Week]</p>
+          <p>Change Since Last Week: [Workouts Change]</p>
+        </div>
+      </section>
+
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <ul>
+          <li>
+            <p>You completed [Workout Name] on [Workout Date].</p>
+          </li>
+          <li>
+            <p>Your weight changed from [Last Week Weight] to [Current Weight] this week.</p>
+          </li>
+          <li>
+            <p>You logged [Calories] calories in your food diary on [Food Diary Date].</p>
+          </li>
+        </ul>
+      </section>
+      <section class="message-trainer">
+        <h2>Message Your Trainer</h2>
+        <form>
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

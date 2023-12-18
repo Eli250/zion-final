@@ -1,0 +1,124 @@
+/* Set default font family and color */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Style the welcome message */
+  .welcome-message {
+    padding: 20px;
+  }
+  
+  /* Style the progress summary */
+  .progress-summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+  
+  .summary-card {
+    background-color: #eee;
+    padding: 20px;
+    border-radius: 5px;
+    flex-basis: 30%;
+  }
+  
+  .summary-card h3 {
+    margin-top: 0;
+  }
+  
+  .recent-activity {
+    margin-top: 30px;
+  }
+  
+  .recent-activity ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recent-activity li {
+    margin-bottom: 10px;
+  }
+  
+  .recent-activity p {
+    margin: 0;
+  }
+  
+  .recent-activity p:first-of-type {
+    font-weight: bold;
+  }
+  /* Styling for the messaging section */
+.messaging {
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  .messaging h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .messaging form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .messaging label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .messaging input[type="text"],
+  .messaging textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .messaging textarea {
+    height: 100px;
+  }
+  
+  .messaging input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .messaging input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  

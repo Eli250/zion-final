@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/Css/landing.css}">
+  <title>Fitness Website</title>
+</head>
+<body>
+  <section>
+    <header>
+      <a href="#" class="logo">Fitness</a>
+      <div class="toggleMenu" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a th:href="@{/landing}">Home</a></li>
+        <li><a th:href="@{/diet}">Eat Better</a></li>
+        <li><a href="#">Find Trainer</a></li>
+        <li><a href="#">Register</a></li>
+        <li><a th:href="@{/trainer}">Trainers</a></li>
+        <li><a  th:href="@{/signup}">Trainee</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="contentBx">
+        <h2>Get Fit &amp; Health With Us</h2>
+        <p>"Get Fit & Health With Us" is the ultimate fitness companion. Our app provides personalized workouts, nutrition plans,
+          and tracking tools to help you reach your health goals. Download now and start your journey to a healthier you.</p>
+        <a href="#">Get Started</a>
+      </div>
+    </div>
+  </section>
+    <div class="container">
+      <div class="text-container">
+      <div class="header-title">
+        <h1>I want to be fit</h1>
+        <p>
+          Join me on a journey to better health and fitness. Together, 
+          we can achieve our goals and unlock a healthier lifestyle. 
+          Are you ready to make a positive change? Let's get fit and
+           embrace a better future!
+        </p>
+      </div>
+      </div>
+      <div class="image-container"></div>
+    </div>
+    
+    <div class="section-three">
+      <h2>Featured</h2>
+      <div class="cards">
+        <div class="row-1">
+          <div class="card">
+            <img src="/images/Screenshot 2023-05-16 at 04.56.04.png" alt="/Image 1" />
+            <p>Transform your body and your life with our fitness program. Join now and start seeing results</p>
+          </div>
+          <div class="card">
+            <img src="/images/main.jpeg" alt="Image 2" />
+            <p>No matter your fitness level, our program is designed to help you reach your goals. Join us today</p>
+          </div>
+          <div class="card">
+            <img src="/images/10%20Quick%20Ways%20to%20Get%20Out%20of%20a%20Funk.jpeg" alt="Image 3" />
+            <p>Get in the best shape of your life with our personalized fitness program. Join now and start your journey to a healthier you.</p>
+          </div>
+          <div class="card">
+            <img src="/images/WhatsApp Image 2023-05-14 at 11.41.06.jpeg" alt="Image 3" />
+           <p>Don't wait to start feeling great. Join our fitness program and take the first step towards a happier, healthier you</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="about-us">
+        <h3>About Us</h3>
+        <div class="vertical-line"></div>
+        <div class="about-us-text">
+          <p class="about-us-text">Welcome to our Fitness App! We are dedicated to helping you achieve your health and fitness goals.
+             Our app provides personalized workout plans, nutrition guidance, and tracking tools to support your fitness journey. 
+             Whether you're a beginner or an experienced fitness enthusiast, our app has something for everyone. Join us today and unlock a world of fitness possibilities!.</p>
+        </div>
+      </div>
+      <div class="additional-content">
+        <h3>Additional Content</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           Sed aliquet nulla eget feugiat fermentum.</p>
+      </div>
+    </footer>
+  
+</body>
+</html>
