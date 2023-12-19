@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Client Form</title>
+  <style>
+    /* CSS styles for the form */
+    body {
+  font-family: Arial, sans-serif;
+  background-color: #b8b6b6;
+  margin: 0;
+  padding: 0;
+}
+    .navbar {
+  background-color:rgba(197, 197, 211, 0.5);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+}
+.menu li:last-child {
+  margin-left: auto;
+}
+
+.menu li:last-child a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #077135;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.login-button {
+  margin-left: 10px;
+}
+.menu li {
+  margin-right: 10px;
+}
+
+.menu li a {
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+.menu li a:hover {
+  color: rgb(0, 153, 255);
+}
+    .client-form {
+    
+      background-color: rgba(197, 197, 211, 0.5);
+      padding: 20px;
+      border-radius: 9px;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .client-form h2 {
+      text-align: center;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .form-column {
+      flex: 1;
+      margin-left: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 70%;
+      padding: 5px;
+      height: 25px;
+      font-size: 15px;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 80px;
+      resize: vertical; /* Allow vertical resizing of textarea */
+    }
+
+    input[type="submit"] {
+      background-color: #077135;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      width: 100px;
+      margin: 0 auto; /* Center the button horizontally */
+      display: block; /* Make the button a block element */
+    }
+
+    .form-row:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+            <li><a href="#">Eat Better</a></li>
+            <li><a href="#">Find Trainer</a></li>
+            <li><a href="#">Trainers </a></li>
+            <li><a href="#">Trainee</a></li>
+          <li><a href="#" class="login-button">Login</a></li>
+        </ul>
+      </nav>
+  <section class="client-form">
+    <h2>Client Information</h2>
+      <form method="POST"  th:action="@{/saveClient}" th:object="${clientForm}">
+      <div class="form-row">
+        <div class="form-column">
+
+            <input type="hidden" th:field="*{id}" />
+            <label for="user">Select Trainer:</label>
+            <select id="user" th:field="*{user.id}" required>
+                <option value="" disabled selected>Select a trainer</option>
+                <option th:each="user : ${users}" th:if="${user.role == 'ROLE_TRAINER'}" th:value="${user.id}" th:text="${user.username}"></option>
+            </select>
+
+        </div>
+        <div class="form-column">
+          <label for="client_email">Email:</label>
+          <input type="email" name="client_email" id="client_email" th:field="*{email}">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-column">
+          <label for="target_goal">Target Goal:</label>
+          <select name="target_goal" id="target_goal" th:name="targetGoal" th:field="*{targetGoal}">
+            <option value="lose_weight">Lose Weight</option>
+            <option value="build_muscle">Build Muscle</option>
+            <option value="improve_endurance">Improve Endurance</option>
+          </select>
+        </div>
+        <div class="form-column">
+          <label for="height">Height:</label>
+          <input type="text" name="height" id="height" th:field="*{height}">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-column">
+          <label for="current_weight">Current Weight (lbs):</label>
+          <input type="text" name="current_weight" id="current_weight" value="150"  th:field="*{currentWeight}">
+        </div>
+        <div class="form-column">
+          <label for="target_weight">Target Weight (lbs):</label>
+          <input type="text" name="target_weight" id="target_weight" value="130" th:field="*{targetWeight}">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-column">
+            <label for="trainer_availability">Trainer Availability:</label>
+            <div>
+            <input type="checkbox" name="trainer_availability[]" id="monday_7am_8am" value="monday_7am_8am">
+            <label for="monday_7am_8am">Monday 7am-8am</label>
+            </div>
+            <div>
+            <input type="checkbox" name="trainer_availability[]" id="wednesday_6pm_8pm" value="wednesday_6pm_8pm">
+            <label for="wednesday_6pm_8pm">Wednesday 6pm-8pm</label>
+            </div>
+            <div>
+            <input type="checkbox" name="trainer_availability[]" id="saturday_9am_11am" value="saturday_9am_11am">
+            <label for="saturday_9am_11am">Saturday 9am-11am</label>
+            </div>
+            </div>
+            <div class="form-column">
+            <label for="description">Description:</label>
+            <textarea name="description" id="description" style="width: 60%;"  th:field="*{description}"></textarea>
+            </div>
+            </div>
+            <div class="form-row">
+            <input type="submit" name="add_progress" value="Submit">
+            </div>
+            </form>
+            
+              </section>
+            </body>
+            </html>

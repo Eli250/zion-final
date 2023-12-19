@@ -1,0 +1,91 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  height: 100vh;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('/images/login.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form {
+  width: 350px;
+  height: auto;
+  background-color: rgba(41, 39, 39, 0.3);
+  box-shadow: 0 5px 30px black;
+  padding: 20px;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.formGroup {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.formGroup input {
+  border: none;
+  width: 80%;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: white;
+}
+
+input:focus {
+  outline: none !important;
+  border-bottom: 2px solid rgb(91, 243, 131);
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+}
+
+.btn2 {
+  padding: 10px;
+  width: 150px;
+  border-radius: 20px;
+  background-color: rgb(10, 136, 43);
+  border-style: none;
+  color: white;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btn2:hover {
+  background-color: rgba(10, 136, 43, 0.5);
+}
+
+.title,
+.formGroup input[type="email"]::placeholder,
+.formGroup input[type="password"]::placeholder,
+.additional-links span {
+  color: white;
+}
+
+.additional-links {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.additional-links a {
+  color: darkblue;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.additional-links a:hover {
+  color: white;
+}

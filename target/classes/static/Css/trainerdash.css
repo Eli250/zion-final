@@ -1,0 +1,201 @@
+/* Set default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-image: url('/images/kelly-sikkema-Dx1b5ucschA-unsplash.jpg');
+  }
+  
+  .navbar {
+   color: #067589;
+   position: absolute;
+   width: 100vw;
+   height: 60px;
+  box-sizing: border-box;
+  top:0;
+  [name="menu-outline"],
+  [name="close-outine"]{
+    transition: all 0.2s ease-in;
+  }
+}
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+  }
+  .menu li:last-child {
+    margin-left: auto;
+  }
+  
+  .menu li:last-child a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #077135;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    margin-left: 10px;
+  }
+  .menu li {
+    margin-right: 10px;
+  }
+  
+  .menu li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  .menu li a:hover {
+    color: rgb(0, 153, 255);
+  }
+  /* Style the main content */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .client-list {
+    margin-bottom: 40px;
+  }
+  
+  .client-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: left;
+  }
+  
+  table td {
+    text-align: center;
+  }
+  
+  table td button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  table td button:hover {
+    background-color: #0062cc;
+  }
+  
+  .client-summary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .client-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .summary-card {
+    width: calc(50% - 10px);
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .summary-card p {
+    margin-bottom: 5px;
+  }
+  
+  .summary-card textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .summary-card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .summary-card button:hover {
+    background-color: #0062cc;
+  }
+  .client-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .client-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .client-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .client-form input[type="text"],
+  .client-form input[type="number"],
+  .client-form select,
+  .client-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+  .client-form input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .client-form input[type="submit"]:hover {
+    background-color: #0069d9;
+  }
+  

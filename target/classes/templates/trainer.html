@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/Css/trainer.css}" />
+  <title>Trainer Registration</title>
+</head>
+<body>
+<div class="container">
+  <div class="form">
+    <h2>Trainer Registration</h2>
+    <form id="registrationForm" th:action="@{/register}" th:object="${user}" method="post">
+      <div class="formGroup">
+        <input type="text" id="userName" placeholder="User Name" autocomplete="off" required th:name="username" th:field="*{username}">
+      </div>
+      <div class="formGroup">
+        <input type="email" placeholder="Email" name="email" required autocomplete="off" th:name="email" th:field="*{email}">
+      </div>
+      <div class="formGroup">
+        <label for="gender">Gender:</label>
+        <select id="gender" required th:name="gender" th:field="*{gender}">
+          <option th:each="gender : ${T(com.webtech.webtechProject.model.Gender).values()}"
+                  th:value="${gender}"
+                  th:text="${gender}">
+          </select>
+
+
+      </div>
+      <div class="formGroup">
+        <input type="number" id="experience" placeholder="Years of Experience" autocomplete="off" required th:name="yearsOfExperience" th:field="*{yearsOfExperience}">
+      </div>
+      <div class="formGroup">
+        <input type="password" id="password" placeholder="Password" required autocomplete="off" th:name="password" th:field="*{password}">
+      </div>
+      <div class="formGroup">
+        <button type="submit" class="btn2">Register</button>
+      </div>
+    </form>
+    <div class="additional-links">
+      <span>Already have an account?</span> <a th:href="@{/login}">Login</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
